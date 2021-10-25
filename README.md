@@ -33,3 +33,4 @@ database (PostgreSQL),which can be a huge help to perform in depth future analys
 The data recorded by through the feedback and gadget prediction forms are recorded. This information is used for analytics that can be 
 offered as a service to our clients 
 
+***Kindly note this project will be uploaded in parts over a period of time. The entire documentation is under progress and will be uploaded shortly.***
