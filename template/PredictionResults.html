@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<title>Z'elle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "{{url_for('static', filename='images/Icon.jpg')}}" type = "image/x-icon"> 
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+a { text-decoration: none; }
+.decoration {
+                width:150px;
+                text-align:center;
+                border:1px solid black;
+                padding:5px
+              
+            }
+			
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+  grid-gap: 5px;
+  
+}
+.grid-item {
+  border:1px solid black;
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  width:150px;
+  width:180px;
+}
+
+.footer {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.footer {
+  border: none;
+  padding: 20px;
+}
+a { text-decoration: none; }
+</style>
+
+
+
+<body class="w3-light-grey">
+
+<div class="w3-bar w3-black w3-hide-small">
+	<b class="w3-bar-item w3-padding-large">Z'elle</b>
+	<a href="Main.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	<a href="Tablets.html" class="w3-bar-item w3-button w3-padding-large">TABLETS</a>
+	<a href="Phone.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PHONES</a>
+	<a href="Computers.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTERS</a>
+	<a href="News.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH NEWS</a>
+	<a href="Predictor.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GADGET PREDICTOR</a>
+	<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FEEDBACK</a>
+  
+</div>
+
+
+
+	
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Devices Most Suitable For You </h3>
+        </div>
+		<br>
+        <div class="w3-justify">
+		<center>	
+			<div class="grid-container">
+			
+				{% for row in UserType %}
+				
+				  <div class="grid-item">
+				  <center>
+					<a href="{{ row[3] }}">
+					<img src="{{ row[2] }}" style="width:90px; height:150px"><br>
+					<span class="w3-large">{{ row[0] }}</span>
+					<br>
+					<span class="w3-medium"><b>₹{{ row[1] }}</b></span>
+					</a>
+				  </center>
+				  </div>
+		
+				{% endfor %}
+			
+			</div>
+		</center>
+		</div> 
+		
+      </div>
+
+
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+
+</body>
+</html>
+
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+<table class="footer">
+<tr>
+	<td class="footer"></td>
+	<td class="footer"><a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer">
+	<strong><u>Device Categories </u></strong><br><br> 
+	<a href="Phone.html">Mobile Device</a><br><br>
+	<a href="Tablets.html">Tablet Phone</a><br><br>
+	<a href="Computers.html">Personal Computer</a>
+	</td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer">
+	<strong><u>Z’elle Features </u></strong><br><br> 
+	<a href="News.html">Technical News</a><br><br>
+	<a href="Predictor.html">Gadget Predictor</a><br><br>
+	<a href="Analytics.html">Analytics</a>
+	</td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer">
+	<a href="Main.html">Home Page</a><br><br>
+	<a href="Main.html#POPULAR POST">Popular Gadgets</a><br><br>
+	<a href="Contact.html">Contact Us</a>
+	</td>
+</tr>
+<table>
+</footer>

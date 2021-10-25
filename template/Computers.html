@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<title>Z'elle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "{{url_for('static', filename='images/Icon.jpg')}}" type = "image/x-icon"> 
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+a { text-decoration: none; }
+.decoration {
+                width:150px;
+                text-align:center;
+                border:1px solid black;
+                padding:5px
+              
+            }
+			
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+  grid-gap: 5px; 
+}
+.grid-item {
+  border:1px solid black;
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  width:150px;
+  width:180px;
+}
+
+.submit-btn {
+
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #000;
+  color: #FFF;
+  padding: 12px 25px;
+  border-color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
+}
+
+.submit-btn:hover {
+  background-color: #03e9f4;
+}
+.grid-item {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.grid-item .tooltiptext {
+  visibility: hidden;
+  width: 105px;
+  opacity: 0.5;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 10px;
+
+  
+  position: absolute;
+  z-index: 1;
+}
+
+.grid-item:hover .tooltiptext {
+  visibility: visible;
+}
+
+.footer {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.footer {
+  border: none;
+  padding: 20px;
+}
+a { text-decoration: none; }
+</style>
+
+
+
+
+<body class="w3-light-grey">
+
+<div class="w3-bar w3-black w3-hide-small">
+	<b class="w3-bar-item w3-padding-large">Z'elle</b>
+	<a href="Main.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	<a href="Tablets.html" class="w3-bar-item w3-button w3-padding-large">TABLETS</a>
+	<a href="Phone.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PHONES</a>
+	<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTERS</a>
+	<a href="News.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH NEWS</a>
+	<a href="Predictor.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GADGET PREDICTOR</a>
+	<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FEEDBACK</a>
+  
+</div>
+
+
+ <div class="w3-content" style="max-width:1600px">
+  <div class="w3-row w3-padding w3-border">
+    <div class="w3-col l8 s12">
+      <div class="w3-container w3-white w3-margin w3-padding-large" id="Computer Grid">
+        <div class="w3-center">
+          <h3>Top Laptops</h3>
+        </div>
+		{% if Flag == 1 %}
+			<div class="w3-center">
+			  Sorry this combination does not exist.
+			  Dont Worry Z'elle has got your back.
+			  We have accumulated data similar to your request<br><br>
+			</div>
+		{% endif %}
+        <div class="w3-justify">
+			<div class="grid-container">
+				{% for row in Laptop %}
+				
+				  <div class="grid-item">
+				  <center>
+					<a href="{{ row[3] }}">
+					<img src="{{ row[2] }}" style="width:90px; height:120px"><br>
+					<span class="w3-large">{{ row[0] }}</span>
+					<br>
+					<span class="w3-medium"><b>₹{{ row[1] }}</b></span>
+					<span class="tooltiptext">RAM: {{ row[4] }}<br>ROM: {{ row[5] }}</span>
+					</a>
+				  </center>
+				  </div>
+		
+				{% endfor %}
+		
+			</div>
+          
+		</div> 
+      </div>
+      <hr>
+
+    </div>
+
+    <div class="w3-col l4">
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black" id="Laptop Filters">
+          <h4>Filters</h4>
+        </div>
+		<form method='POST'>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <span class="w3-large">Brand</span>
+            <br>
+            <span>
+				<table>
+					<tr>
+						<td class="decoration"><input type="checkbox" id="Apple" name="Brand" value="Apple"> <label for="Apple">Apple</label></td>
+						<td class="decoration"><input type="checkbox" id="Samsung" name="Brand" value="Samsung"> <label for="Samsung">Samsung</label></td>
+						<td class="decoration"><input type="checkbox" id="Lenovo" name="Brand" value="Lenovo"> <label for="Lenovo">Lenovo</label></td>
+					</tr>
+					<tr>
+						<td class="decoration"><input type="checkbox" id="Hp" name="Brand" value="Hp"> <label for="Hp">HP</label></td>
+						<td class="decoration"><input type="checkbox" id="Asus" name="Brand" value="Asus"> <label for="Asus">Asus</label></td>
+						<td class="decoration"><input type="checkbox" id="Dell" name="Brand" value="Dell"> <label for="Dell">Dell</label></td>
+					</tr>	
+					<tr>
+						<td class="decoration"><input type="checkbox" id="Lg" name="Brand" value="Lg"> <label for="Lg">LG</label></td>
+						<td class="decoration"><input type="checkbox" id="Toshiba" name="Brand" value="Toshiba"> <label for="Toshiba">Toshiba</label></td>
+						<td class="decoration"><input type="checkbox" id="Acer" name="Brand" value="Acer"> <label for="Acer">Acer</label></td>
+					</tr>						
+				</table>
+			</span>
+          </li>
+		  <li class="w3-padding-16">
+            <span class="w3-large">RAM</span>
+            <br>
+            <span>
+				<table>
+					<tr>
+						<td class="decoration"><input type="checkbox" id="32 GB" name="RAM" value="32 GB"> <label for="32 GB">32 GB</label></td>
+						<td class="decoration"><input type="checkbox" id="16 GB" name="RAM" value="16 GB"> <label for="16 GB">16 GB</label></td>					
+						<td class="decoration"><input type="checkbox" id="8 GB" name="RAM" value="8 GB"> <label for="8 GB">8 GB</label></td>
+
+					</tr>
+					<tr>
+						<td class="decoration"><input type="checkbox" id="6 GB" name="RAM" value="6 GB"> <label for="6 GB">6 GB</label></td>
+						<td class="decoration"><input type="checkbox" id="4 GB" name="RAM" value="4 GB"> <label for="4 GB">4 GB</label></td>
+						<td class="decoration"><input type="checkbox" id="3 GB" name="RAM" value="3 GB"> <label for="3 GB">3 GB</label></td>
+					</tr>					
+				</table>
+			</span>
+          </li>
+          <li class="w3-padding-16">
+            <span class="w3-large">ROM</span>
+            <br>
+            <span>
+				<table>
+					<tr>
+						<td class="decoration"><input type="checkbox" id="2 TB" name="ROM" value="2 TB"> <label for="2 TB">2 TB</label></td>
+						<td class="decoration"><input type="checkbox" id="1 TB" name="ROM" value="1 TB"> <label for="1 TB">1 TB</label></td>
+						<td class="decoration"><input type="checkbox" id="750 GB" name="ROM" value="750 GB"> <label for="750 GB">750 GB</label></td>
+					</tr>
+					<tr>
+						<td class="decoration"><input type="checkbox" id="500 GB" name="ROM" value="500 GB"> <label for="500 GB">500 GB</label></td>
+						<td class="decoration"><input type="checkbox" id="256 GB" name="ROM" value="256 GB"> <label for="256 GB">256 GB</label></td>
+						<td class="decoration"><input type="checkbox" id="128 GB" name="ROM" value="128 GB"> <label for="128 GB">128 GB</label></td>
+					</tr>							
+				</table>			
+			</span>
+          </li>			  
+		  <li class="w3-padding-16">
+            <span>
+				<center>
+					<input type="submit" class="submit-btn" value="SUBMIT">
+				</center>
+			</span>
+          </li>				  
+        </ul>
+		</form>
+      </div>
+      <hr>
+
+    </div>
+  </div>
+</div>
+
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+
+</body>
+</html>
+
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+<table class="footer">
+<tr>
+	<td class="footer"></td>
+	<td class="footer"><a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer">
+	<strong><u>Device Categories </u></strong><br><br> 
+	<a href="Phone.html">Mobile Device</a><br><br>
+	<a href="Tablets.html">Tablet Phone</a><br><br>
+	<a href="Computers.html">Personal Computer</a>
+	</td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer">
+	<strong><u>Z’elle Features </u></strong><br><br> 
+	<a href="News.html">Technical News</a><br><br>
+	<a href="Predictor.html">Gadget Predictor</a><br><br>
+	<a href="Analytics.html">Analytics</a>
+	</td>
+	<td class="footer"></td>
+	<td class="footer"></td>
+	<td class="footer">
+	<a href="Main.html">Home Page</a><br><br>
+	<a href="Main.html#POPULAR POST">Popular Gadgets</a><br><br>
+	<a href="Contact.html">Contact Us</a>
+	</td>
+</tr>
+<table>
+</footer>

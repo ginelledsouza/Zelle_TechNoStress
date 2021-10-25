@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<title>Z'elle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "{{url_for('static', filename='images/Icon.jpg')}}" type = "image/x-icon"> 
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  
+}
+th, td {
+
+  padding: 20px;
+}
+a { text-decoration: none; }
+</style>
+</style>
+
+<body class="w3-light-grey">
+
+<div class="w3-bar w3-black w3-hide-small">
+	<b class="w3-bar-item w3-padding-large">Z'elle</b>
+	<a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	<a href="#TABLETS" class="w3-bar-item w3-button w3-padding-large">TABLETS</a>
+	<a href="#MOBILE PHONES" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PHONES</a>
+	<a href="#PERSONAL COMPUTERS" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTERS</a>
+	<a href="#POPULAR POST" class="w3-bar-item w3-button w3-padding-large w3-hide-small">POPULAR POST</a>
+	<a href="News.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH NEWS</a>
+	<a href="Predictor.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GADGET PREDICTOR</a>
+	<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FEEDBACK</a>
+  
+</div>
+
+<div class="w3-content" style="max-width:1600px">
+
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge">Welcome to <span class="w3-tag">Z'elle</span></h1>
+  </header>
+
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="{{url_for('static', filename='images/One.jpg')}}" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">With Z'elle,</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>TechNoStress</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('about').style.display='block'">ABOUT US</button></h6>
+    </div>
+  </header>
+
+  <div class="w3-row w3-padding w3-border">
+
+    <div class="w3-col l8 s12">
+    
+      <div class="w3-container w3-white w3-margin w3-padding-large" id="TABLETS">
+        <div class="w3-center">
+          <h3>TABLETS</h3>
+        </div>
+
+        <div class="w3-justify">
+          <img src="{{url_for('static', filename='images/Five_Check.jpg')}}" style="width:100%" height="10%" class="w3-padding-16">
+          <p>Tablets are computers that are larger than a smartphone but smaller than personal computers. 
+		  Its size can be said to be an intermediate between the two. Tablet computers may or may not comprise a keyboard or a stylus to input 
+		  information. Z’elle offers a wide variety of tablet computers based on performance and customer reviews to produce the best results for 
+		  you in a platter.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="location.href='Tablets.html'"><b><i class="fa fa-search"></i> Explore</b></button></p>
+          <p class="w3-clear"></p>
+        </div> 
+      </div>
+      <hr>
+
+      <div class="w3-container w3-white w3-margin w3-padding-large" id="MOBILE PHONES">
+        <div class="w3-center">
+          <h3>MOBILE PHONES</h3>
+        </div>
+
+        <div class="w3-justify">
+          <img src="{{url_for('static', filename='images/Three_Check.jpg')}}" style="width:100%" class="w3-padding-16">
+          <p>A mobile phone has become a basic need to main. Each and everyone owns a mobile phone. We often tend to wonder which phone would 
+		  be the best for us? Do we need internal storage of 256GB? Or would 256GB even suffice? To know more explore the extensive list of 
+		  the best phone we have collected for your pursual </p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="location.href='Phone.html'"><b><i class="fa fa-search"></i> Explore</b></button></p>
+          <p class="w3-clear"></p>
+ 
+        </div>
+      </div>
+
+      <div class="w3-container w3-white w3-margin w3-padding-large" id="PERSONAL COMPUTERS">
+        <div class="w3-center">
+          <h3>PERSONAL COMPUTERS</h3>
+        </div>
+
+        <div class="w3-justify">
+          <img src="{{url_for('static', filename='images/Four_Check.jpg')}}" style="width:100%" class="w3-padding-16">
+          <p>Computer specifications for sheer presentations will vary from creative graphic projects. If one will use it for creative projects, 
+		  they are better off investing in higher specifications thus satisfying their needs. Luckily, we don’t have to burn a hole in your pocket 
+		  to do so. Thanks to the increasingly powerful yet more affordable processors and graphics cards that Intel, AMD, and Nvidia are rolling out,
+		  it’s easy to find a great option without spending a whole lot. Here is a range of computers that will allow a user to find a computer that 
+		  satisfies their needs</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="location.href='Computers.html'"><b><i class="fa fa-search"></i> Explore</b></button></p>
+          <p class="w3-clear"></p>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <div class="w3-col l4">
+      <div class="w3-white w3-margin">
+        <img src="{{url_for('static', filename='images/Six.jpg')}}" alt="Ginelle" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Ginelle D'souza</h4>
+          <p>Hey you all ! I am a hard core data enthusiast eager to explore and share the true meaning of data. My unconditional love to provide answers to the unknown resulted in the creation of "Z'elle". Hope you would truly find Z'elle as your one stop solution to technology.</p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black" id="POPULAR POST">
+          <h4>Top Gadgets</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+		{% for row in TopTech %}
+          <li class="w3-padding-16">
+            <img src="{{ row[2] }}" alt="Image" class="w3-left w3-margin-right" style="width:30px; height:60px ">
+            <span class="w3-large">{{ row[0] }}</span>
+            <br>
+            <span>₹ {{ row[1] }}</span>
+          </li>
+        {% endfor %}
+		</ul>
+      </div>
+      <hr>
+ 
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Follow Me</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+		<center>
+          <a href="https://www.facebook.com/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+		  <a href="https://www.instagram.com/" class="w3-bar-item w3-button"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+		  <a href="https://in.pinterest.com/" class="w3-bar-item w3-button"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+		  <a href="https://in.linkedin.com/" class="w3-bar-item w3-button"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+		  <a href="https://medium.com/" class="w3-bar-item w3-button"><i class="fa fa-medium"></i></a>
+		</center>
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black" id="CONTACT US">
+          <h4>CONTACT US</h4>
+        </div>
+        <div class="w3-container w3-white">
+		  <p>Mobile Number: +91-0000000000 </p>
+		  <p>Office Number: 022-00000000 </p>
+		  <p>Email: connectz'elle@gmail.com</p>
+          
+		  </div>
+      </div>
+	  <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>REFERENCE</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+		<p> Z'elle is a project created for educational purposes as a course curriculum. This will be operational for a period of one month starting 12th June 2021.
+		This website should not be confused with Zelle a United States–based digital payments network. The following are the list of references used for the creation</p>
+		<ul>
+		<li><a href="https://www.w3schools.com"> W3 Schools </a></li>
+		<li><a href="https://pricebaba.com"> Price Baba </a></li>
+		<li><a href="https://gadgets.ndtv.com/"> NDTV Gadgets </a></li>
+		<li><a href="https://stackoverflow.com"> Stackoverflow </a></li>
+		<li><a href="https://codepen.io"> CodePen </a></li>
+		</ul>
+        </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+</div>
+<div id="about" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('about').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">ABOUT US</h2>
+	    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<p>
+		    <p>
+			In this fast pace world, we have the least time to research over the ever-increasing new technologies and gadgets. There is always a question 
+			that occurs in our mind - Are high ended technologies a necessity or just a sign of luxury? And the answer to this debatable question would surely be <strong>NONE</strong>. 
+			Yes, you have read it right. 
+			</p>
+			
+			<p>Owning technology in this era is a must whether it has been categorized as a high or low ended technology. 
+			So, the real question is which technology/gadget would be the best to use. We at Z’elle would love to help you find an answer to this question. 
+			Z’elle brings to you a range of optimal technologies that have been purchased, used, and loved by many. These enlisted gadgets 
+			are <strong>pocket-friendly and user dedicated</strong>, based on your requirements.
+			</p>
+			
+			<p> Still, bumped? No issue. Let our unique <strong>“Gadget Predictor”</strong> work its magic. Z’elles own “Gadget Predictor” makes use of 
+			Artificial Intelligence to provide a list of potential gadgets that would be optimal for your use in no time. What you have to do? Nothing. According to your needs, we provide you a variety of 
+			solutions so that truly Z’elle can be your <strong>”One Stop Technology”</strong>
+			</p>
+		</p>
+   </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+<table>
+<tr>
+	<td></td>
+	<td><a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>
+	<strong><u>Device Categories </u></strong><br><br> 
+	<a href="Phone.html">Mobile Device</a><br><br>
+	<a href="Tablets.html">Tablet Phone</a><br><br>
+	<a href="Computers.html">Personal Computer</a>
+	</td>
+	<td></td>
+	<td></td>
+	<td>
+	<strong><u>Z’elle Features </u></strong><br><br> 
+	<a href="News.html">Technical News</a><br><br>
+	<a href="Predictor.html">Gadget Predictor</a><br><br>
+	<a href="Analytics.html">Analytics</a>
+	</td>
+	<td></td>
+	<td></td>
+	<td>
+	<a href="Main.html">Home Page</a><br><br>
+	<a href="Main.html#POPULAR POST">Popular Gadgets</a><br><br>
+	<a href="Contact.html">Contact Us</a>
+	</td>
+</tr>
+<table>
+</footer>
+
+<script>
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>

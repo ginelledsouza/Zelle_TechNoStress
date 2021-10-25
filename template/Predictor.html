@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<title>Z'elle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "{{url_for('static', filename='images/Icon.jpg')}}" type = "image/x-icon">  
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+
+
+.AI-box {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 800px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  background: url("{{url_for('static', filename='images/PredictionFeedback.jpg')}}");
+
+  background-repeat: no-repeat;
+  background-size: 800px 850px;
+
+}
+
+.AI-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.AI-box .user-box {
+  position: relative;
+}
+
+.AI-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.AI-box form a {
+  
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #0f0f0f;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.AI-box a:hover {
+
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.AI-box form strong {
+	color: white
+}
+
+.decoration {
+                width:350px;
+                text-align:left;
+                padding:5px
+				
+              
+            }
+			
+.AI-box .submit-btn {
+
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #000;
+  color: #FFF;
+  padding: 12px 25px;
+  border-color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
+}
+
+.AI-box .submit-btn:hover {
+  background-color: #03e9f4;
+}	
+</style>
+
+<body>
+<div class="w3-bar w3-black w3-hide-small">
+	<b class="w3-bar-item w3-padding-large">Z'elle</b>
+	<a href="Main.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	<a href="Tablets.html" class="w3-bar-item w3-button w3-padding-large">TABLETS</a>
+	<a href="Phone.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PHONES</a>
+	<a href="Computers.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTERS</a>
+	<a href="News.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH NEWS</a>
+	<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GADGET PREDICTOR</a>
+	<a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FEEDBACK</a>
+  
+</div>
+<div class="parent-wrapper">
+<div class="AI-box">
+  <h2>Z'elle AI Prediction</h2>
+  		{% if Flag == 1 %}
+			<div class="w3-center" style="color: #fff">
+			  Sorry ! There seems to be some problem.
+			  Dont Worry Z'elle has got your back.
+			  Kindly enter all details needed for the analysis<br><br>
+			</div>
+		{% endif %}
+  <form method='POST'>
+  <div class="user-box">
+   <label>1. What is it that you are looking for?</label><br><br>
+   <table>
+   <td class="decoration"><input type="radio" id="Mobile Phones" name="Device" value="Mobile Phones">&nbsp;<strong>Mobile Phones</strong></td>
+   <td class="decoration"><input type="radio" id="Tablet Phones" name="Device" value="Tablet Phones">&nbsp;<strong>Tablet Phones</strong></td>
+   <td class="decoration"><input type="radio" id="Personal Computers" name="Device" value="Personal Computers">&nbsp;<strong>Personal Computers</strong></td>
+   </table>
+  </div>
+  <br>
+  <div class="user-box">
+   <label>2. What is important to you - device speed or device storage capacity?</label><br><br>
+   <table>
+   <td class="decoration"><input type="radio" id="Speed" name="Function" value="Speed">&nbsp;<strong>Speed</strong></td>
+   <td class="decoration"><input type="radio" id="Storage" name="Function" value="Storage">&nbsp;<strong>Storage</strong></td>
+   <td class="decoration"><input type="radio" id="Both" name="Function" value="Both">&nbsp;<strong>Both</strong></td>
+   </table>
+  </div>
+  <br>
+  <div class="user-box">
+   <label>3. Are you a photo person?</label><br><br>
+   <table>
+   <td class="decoration"><input type="radio" id="Yes" name="Photograph" value="Yes">&nbsp;<strong>Yes</strong></td>
+   <td class="decoration"><input type="radio" id="No" name="Photograph" value="No">&nbsp;<strong>No</strong></td>
+   <td class="decoration"><input type="radio" id="Maybe" name="Photograph" value="Maybe">&nbsp;<strong>Maybe</strong></td>
+   </table>
+  </div>
+  <br>
+  <div class="user-box">
+   <label>4. How long would you use your device?</label><br><br>
+   <table>
+   <td class="decoration"><input type="radio" id="Less hour" name="Usage" value="Less than an hour">&nbsp;<strong>Less than an hour</strong></td>
+   <td class="decoration"><input type="radio" id="Between 3-4" name="Usage" value="Between 3 - 4 hours">&nbsp;<strong>Between 3 - 4 hours</strong></td>
+   <td class="decoration"><input type="radio" id="Over 4" name="Usage" value="More than 4 hours">&nbsp;<strong>More than 4 hours</strong></td>
+   </table>
+  </div>
+  <br>
+  <div class="user-box">
+   <label>5. Budget you would like to maintained</label><br><br>
+   <table>
+   <td class="decoration"><input type="radio" id="Less 15000" name="Cost" value="Less than 15,000">&nbsp;<strong>Less than 15,000</strong></td>
+   <td class="decoration"><input type="radio" id="Between 15000-30000" name="Cost" value="Between 15,000 - 30,000">&nbsp;<strong>Between 15,000 - 30,000</strong></td>
+   <td class="decoration"><input type="radio" id="Over 30000" name="Cost" value="Over 30,0000">&nbsp;<strong>Over 30,0000</strong></td>
+   </table>
+  </div><br><br>
+	<center>
+    
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+	 <input type="submit" class="submit-btn" value="SUBMIT">  </input>
+	</center>
+  </form>
+</div>
+</div>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+</body>
+</html>
