@@ -1,10 +1,10 @@
 import psycopg2
 
-dbusername = <postgresql_username>
-dbpassword = <postgresql_password>
-dbhost = <postgresql_host>
-dbport = <postgresql_port>
-dbname = <postgresql_database_name>
+dbusername = '<postgresql_username>'
+dbpassword = '<postgresql_password>'
+dbhost = '<postgresql_host>'
+dbport = '<postgresql_port>'
+dbname = '<postgresql_database_name>'
 
 # =============================================================================
 # # CODE TO CREATE A TABLE IN POSTGRESQL
