@@ -16,6 +16,8 @@ that have been purchased, used, and loved by many.
 1. **Content Based Recommendation**<br>
 When the requested features are unavailable, recommendations are made based on the similar features that have been requested by the user. 
 These results are then filtered by ratings and stars given by millions, thus offering the best technology to our end users
+![Content Based Recommendation](https://user-images.githubusercontent.com/64312327/143891615-1f23226a-cdb1-4d2b-ad7e-d8bec7253fd9.png)
+
 	
 2. **Algorithm Based Recommendation**<br>
 Many times users are unaware of what technology would be the best for them. In such cases the website provides a set of questionnaire. 
