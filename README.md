@@ -17,10 +17,6 @@ that have been purchased, used, and loved by many.
 When the requested features are unavailable, recommendations are made based on the similar features that have been requested by the user. 
 These results are then filtered by ratings and stars given by millions, thus offering the best technology to our end users
 
-![Filter Based Recommendation](https://user-images.githubusercontent.com/64312327/145067103-83cfac01-645e-4d2b-a171-da590a78b591.png)
-
-![Content Based Recommendation](https://user-images.githubusercontent.com/64312327/145066938-eda9c988-4af7-4f31-ba2a-f27245ef93cd.png)
-
 2. **Algorithm Based Recommendation**<br>
 Many times users are unaware of what technology would be the best for them. In such cases the website provides a set of questionnaire. 
 Based on the usage details given by the users, Z’elle AI predicts the best technologies. 
