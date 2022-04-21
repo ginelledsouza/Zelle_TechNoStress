@@ -35,4 +35,5 @@ offered as a service to our clients. For analytics  "Google Data Studio" has bee
 
 # Project Screenshots
 
-<img width="450" alt="Homepage" src="https://user-images.githubusercontent.com/64312327/164507692-432d2048-8c85-4811-a3fc-5c6f4b355f95.png">
+<img width="960" alt="1" src="https://user-images.githubusercontent.com/64312327/164508595-0bc3989a-50b5-4882-832c-aa91a3fdfc56.png">
+<img width="650" alt="1" src="https://user-images.githubusercontent.com/64312327/164508595-0bc3989a-50b5-4882-832c-aa91a3fdfc56.png">
