@@ -35,5 +35,13 @@ offered as a service to our clients. For analytics  "Google Data Studio" has bee
 
 # Project Screenshots
 
-<img width="960" alt="1" src="https://user-images.githubusercontent.com/64312327/164508595-0bc3989a-50b5-4882-832c-aa91a3fdfc56.png">
-<img width="650" alt="1" src="https://user-images.githubusercontent.com/64312327/164508595-0bc3989a-50b5-4882-832c-aa91a3fdfc56.png">
+<img width="960" alt="Homepage" src="https://user-images.githubusercontent.com/64312327/164508595-0bc3989a-50b5-4882-832c-aa91a3fdfc56.png">
+
+<img width="960" alt="Gadget Selection" src="https://user-images.githubusercontent.com/64312327/164508904-35dbd45e-cbb2-4ec8-bb66-c0103d81205e.png">
+
+<img width="960" alt="Basic Filtration" src="https://user-images.githubusercontent.com/64312327/164509006-4da3bd16-d648-4c41-8670-af3d33aff0d7.png">
+
+<img width="960" alt="Content Based Recommendation" src="https://user-images.githubusercontent.com/64312327/164509081-4081d0e3-fe10-4dfe-8aa2-847dd45b4c5f.png">
+
+<img width="960" alt="AI Recommendation 1" src="https://user-images.githubusercontent.com/64312327/164509285-d1278d89-f8fb-46f2-9e3f-8a32cc9c22c5.png">
+
