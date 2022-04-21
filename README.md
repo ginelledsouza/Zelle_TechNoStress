@@ -32,3 +32,7 @@ database (PostgreSQL),which can be a huge help to perform in depth future analys
 5. **Z’elle Analytics**<br>
 The data recorded by through the feedback and gadget prediction forms are recorded. This information is used for analytics that can be 
 offered as a service to our clients. For analytics  "Google Data Studio" has been implemented.  
+
+# Project Screenshots
+
+![Homepage](<img width="341" alt="R1" src="https://user-images.githubusercontent.com/64312327/164507692-432d2048-8c85-4811-a3fc-5c6f4b355f95.png">)
