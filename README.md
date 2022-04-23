@@ -45,7 +45,7 @@ offered as a service to our clients. For analytics  "Google Data Studio" has bee
 
 <img width="960" alt="AI Recommendation 1" src="https://user-images.githubusercontent.com/64312327/164509285-d1278d89-f8fb-46f2-9e3f-8a32cc9c22c5.png">
 
-<img width="960" alt="AI Recommendation 2" src="https://user-images.githubusercontent.com/64312327/164509474-e3b5d779-2f51-4676-bd76-2b1441d4e015.png">
+<img width="960" alt="AI Recommendation 2" src="https://user-images.githubusercontent.com/64312327/164644667-8536ce42-6eb4-4992-b290-0af5d3bf02fb.png">
 
 <img width="960" alt="Technical News" src="https://user-images.githubusercontent.com/64312327/164509729-4ea3dc4a-2f6c-4b3f-9625-2d0cdf2fb9a2.png">
 
